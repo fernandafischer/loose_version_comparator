@@ -1,6 +1,6 @@
 [project]
 name = "loose-version-comparator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Compares version strings that do not follow any strict spec by splitting on non-numeric boundaries."
 requires-python = ">=3.10"
 dependencies = []
