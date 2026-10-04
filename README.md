@@ -27,3 +27,10 @@ There is no `alpha < beta < rc < release` keyword ladder. A numeric release toke
 
 - `Version(raw: str)` — parseable, comparable, hashable.
 - `compare(a: str, b: str) -> int` — returns `-1`, `0`, or `1`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
